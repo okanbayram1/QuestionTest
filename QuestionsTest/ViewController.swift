@@ -3,7 +3,12 @@
 //  QuestionsTest
 //
 //  Created by okan bayram on 6.02.2025.
-//
+//  buttonClicked ve sonrası:
+//  1.    Kullanıcı butona bastığında, buttonClicked fonksiyonu çalışıyor.
+//  2.    Basılan butonun başlığı selectedButton değişkenine atanıyor.
+//  3.    setSelectedAnswer fonksiyonu çağrılarak selectedButton içeriği kontrol ediliyor.
+//  4.    Seçilen şıkkın içeriği choosenAnswer değişkenine atanıyor.
+
 
 import UIKit
 
@@ -22,22 +27,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
     }
-
+    
     @IBAction func buttonClicked(_ sender: UIButton) {
-        let selectedButton = sender.titleLabel?.text
-        print(selectedButton ?? "Error Button Name")
-        updateUI()
+        guard let selectedButton = sender.titleLabel?.text else { return }
+        
+        questions.setSelectedAnswer(selectedButton)
         questions.checkAnswer()
-        questions.abc()
+        updateUI()
     }
+    
     func updateUI() {
         questionLabel.text = questions.getQuestion()
         aLabel.text = "A: \(questions.getAnswerA())"
         bLabel.text = "B: \(questions.getAnswerB())"
         cLabel.text = "C: \(questions.getAnswerC())"
         scoreLabel.text = "Score: \(questions.getScore())"
-        
     }
-    
 }
-

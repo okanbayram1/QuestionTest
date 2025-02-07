@@ -127,26 +127,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHz-g3-Xiv">
-                                <rect key="frame" x="167" y="723" width="60" height="34"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Start">
-                                            <attributes>
-                                                <font key="NSFont" size="17" name="Helvetica"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLT-Xh-0FF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -158,12 +138,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="srH-SD-wlr" secondAttribute="bottom" constant="115" id="8Og-MW-EDH"/>
                             <constraint firstItem="yDH-ih-NQK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ap0-ec-Laq"/>
                             <constraint firstItem="yDH-ih-NQK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6Q-QP-A6I"/>
-                            <constraint firstItem="HHz-g3-Xiv" firstAttribute="centerX" secondItem="srH-SD-wlr" secondAttribute="centerX" id="Cxm-18-tpW"/>
                             <constraint firstItem="gkX-un-t2I" firstAttribute="leading" secondItem="yDH-ih-NQK" secondAttribute="leading" id="F8X-qr-SZi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="srH-SD-wlr" secondAttribute="trailing" constant="50" id="GdQ-Ra-OmQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ZX-Uc-ZJl" secondAttribute="trailing" constant="50" id="GgB-oH-RHS"/>
                             <constraint firstItem="7ZX-Uc-ZJl" firstAttribute="leading" secondItem="hSE-r7-3Xs" secondAttribute="leading" id="JcM-XY-8e1"/>
-                            <constraint firstItem="HHz-g3-Xiv" firstAttribute="top" secondItem="srH-SD-wlr" secondAttribute="bottom" constant="20" id="Lhu-h6-gxO"/>
                             <constraint firstItem="gkX-un-t2I" firstAttribute="trailing" secondItem="yDH-ih-NQK" secondAttribute="trailing" id="NEh-7m-jht"/>
                             <constraint firstItem="ZGk-cq-em8" firstAttribute="top" secondItem="Ltf-tw-eFr" secondAttribute="bottom" constant="14" id="OeD-xH-p1y"/>
                             <constraint firstItem="TFQ-73-UfM" firstAttribute="top" secondItem="ZGk-cq-em8" secondAttribute="bottom" constant="8" id="Vff-z7-6N7"/>
@@ -181,7 +159,6 @@
                             <constraint firstItem="ZGk-cq-em8" firstAttribute="trailing" secondItem="TFQ-73-UfM" secondAttribute="trailing" id="olz-d5-hQV"/>
                             <constraint firstItem="hSE-r7-3Xs" firstAttribute="top" secondItem="7ZX-Uc-ZJl" secondAttribute="bottom" constant="8" id="rD0-PE-eFQ"/>
                             <constraint firstItem="7ZX-Uc-ZJl" firstAttribute="trailing" secondItem="hSE-r7-3Xs" secondAttribute="trailing" id="t24-eW-Eja"/>
-                            <constraint firstItem="HHz-g3-Xiv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="tbb-2w-kM6"/>
                             <constraint firstItem="hSE-r7-3Xs" firstAttribute="leading" secondItem="srH-SD-wlr" secondAttribute="leading" id="wpX-K0-dZa"/>
                             <constraint firstItem="Ltf-tw-eFr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="y3A-9Y-Cfr"/>
                         </constraints>

@@ -12,9 +12,6 @@ struct Questions {
     var score = 0
     var correctAnswer: String = ""
     var choosenAnswer: String = ""
-    var controlNo = 0
-    
-    var vController = ViewController()
     
     let quiz = [
         Problem(q: "Which is the largest organ in the human body?", a: ["Heart", "Skin", "Large Intestine"], correctAnswer: "Skin"),
@@ -30,43 +27,40 @@ struct Questions {
     ]
     
     mutating func checkAnswer() {
-        if choosenAnswer == quiz[controlNo].correctAnswer {
+        if choosenAnswer == quiz[qNumber].correctAnswer {
             score += 1
         }
+        
         if qNumber + 1 < quiz.count {
             qNumber += 1
         } else {
             qNumber = 0
             score = 0
-            controlNo = 0
         }
-        print(choosenAnswer)
-//        print(quiz[qNumber].correctAnswer)
-        controlNo += 1
     }
     
-    mutating func getQuestion() -> String {
+    func getQuestion() -> String {
         return quiz[qNumber].q
     }
-    mutating func getAnswerA() -> String {
+    func getAnswerA() -> String {
         return quiz[qNumber].a[0]
     }
-    mutating func getAnswerB() -> String {
+    func getAnswerB() -> String {
         return quiz[qNumber].a[1]
     }
-    mutating func getAnswerC() -> String {
+    func getAnswerC() -> String {
         return quiz[qNumber].a[2]
     }
     func getScore() -> Int {
         return score
     }
-    mutating func abc() {
-        let selected = vController.selectedButton
+    
+    mutating func setSelectedAnswer(_ selected: String) {
         if selected == "Select A" {
             self.choosenAnswer = quiz[qNumber].a[0]
         } else if selected == "Select B" {
             self.choosenAnswer = quiz[qNumber].a[1]
-        } else {
+        } else if selected == "Select C" {
             self.choosenAnswer = quiz[qNumber].a[2]
         }
         print(choosenAnswer)
